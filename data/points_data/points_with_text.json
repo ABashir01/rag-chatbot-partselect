@@ -1,0 +1,103 @@
+[
+    {
+        "id": 0,
+        "vector": "This part is a door balance link kit, also sometimes known as door cable or door spring cable kit, that helps support the door as it opens and closes by connecting to the dishwasher door hinges. Fixes door latch failure, door won't close, noisy, and leaking. Manufactured by Whirlpool for KitchenAid, Kenmore, Whirlpool, Maytag dishwashers.",
+        "payload": {
+            "type": "part",
+            "name": "Door Balance Link Kit 8194001",
+            "description": "This part is a door balance link kit, also sometimes known as door cable or door spring cable kit, that helps support the door as it opens and closes by connecting to the dishwasher door hinges. The kit includes two door balance links and two door balance mounts with wheels, which will replace both the left and right sides. The only tool needed is a 5/16 nut driver. Before removing the existing kit, take note of how the door balance link kit is assembled for a smooth replacement process. It is recommended to check the door springs in case they need to be replaced as well.",
+            "image": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/972325-1-L-Whirlpool-8194001-Door-Balance-Link-Kit.jpg",
+            "manufacturer-part-number": "8194001",
+            "partselect-number": "PS972325",
+            "brand": "Whirlpool",
+            "appliance-types": ["dishwasher"],
+            "compatible-with-these-brands": ["KitchenAid", "Kenmore", "Whirlpool", "Maytag"],
+            "compatible-with-these-models": ["WDT780SAEM1"],
+            "fixes_these_symptoms": ["door latch failure", "door wont close", "noisy", "leaking"],
+            "installation-instructions-video": "https://www.youtube.com/watch?v=X02l3pHeOUI",
+            "price": 33.09,
+            "in_stock": true,
+            "reviews": {
+                    "average-rating": 4.9,
+                    "total-reviews": 202
+            },
+            "link": "https://www.partselect.com/PS972325-Whirlpool-8194001-Door-Balance-Link-Kit.htm"
+        }
+    },
+    {
+        "id": 1,
+        "vector": "The rack track stop on your dishwasher is designed to stop the dish rack at the appropriate place when opening and closing the rack. Fixes not cleaning dishes properly, door latch failure, and door won't close. Manufactured by Whirlpool for Whirlpool, Kenmore, KitchenAid, Maytag dishwashers.",
+        "payload": {
+            "type": "part",
+            "name": "Rack Track Stop WP8565925",
+            "description": "The rack track stop on your dishwasher is designed to stop the dish rack at the appropriate place when opening and closing the rack. If your dishwasher is not cleaning your dishes properly, the rack stop may need to be replaced. The replacement part may differ slightly from the broken part, depending on the model. However, the different styles are interchangeable. This product is sold individually and comes in both a white and grey plastic version. Many of our customers found this repair to be very easy and takes less than 30 minutes to complete. Simply snap the old part out and snap the new part into place. You will not require any tools to complete the job. This is an authentic part approved by the manufacturer.",
+            "image": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/11746591-1-L-Whirlpool-WP8565925-Rack-Track-Stop.jpg",
+            "manufacturer-part-number": "WP8565925",
+            "partselect-number": "PS11746591",
+            "brand": "Whirlpool",
+            "appliance-types": ["dishwasher"],
+            "compatible-with-these-brands": ["Whirlpool", "Kenmore", "KitchenAid", "Maytag"],
+            "compatible-with-these-models": ["WDT780SAEM1"],
+            "fixes_these_symptoms": ["not cleaning dishes properly", "door latch failure", "door wont close"],
+
+            "installation-instructions-video": "https://www.youtube.com/watch?v=siE-8HethWg",
+            "price": 7.70,
+            "in_stock": true,
+            "reviews": {
+                    "average-rating": 4.6,
+                    "total-reviews": 118 
+            },
+            "link": "https://www.partselect.com/PS11746591-Whirlpool-WP8565925-Rack-Track-Stop.htm"
+        }
+    },
+    {
+        "id": 2,
+        "vector": "This manufacturer-certified Refrigerator Door Shelf Bin, also known as the crisper bin and door shelf bin, is made of clear plastic, and is easy to install. Fixes door won't open or close, ice maker won't dispense ice, and leaking. Manufactured by Whirlpool for Whirlpool, Kenmore, Maytag, KitchenAid refrigerators.",
+        "payload": {
+            "type": "part",
+            "name": "Refrigerator Door Shelf Bin WPW10321304",
+            "description": "This manufacturer-certified Refrigerator Door Shelf Bin, also known as the crisper bin and door shelf bin, is made of clear plastic, and is easy to install. It is used to hold items in the fridge door, like jars, bottles, cans, and condiments, and this item is clear with white trim around its top edge and you'll be able to visually see if the part is broken. This particular shelf attaches to the fridge door. You can check if this model is right for your appliance by checking your user manual and model number. This individually-sold door bin fits many different models of side-by-side refrigerator, and can be installed with the use of no tools.",
+            "image": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/11752778-1-L-Whirlpool-WPW10321304-Refrigerator-Door-Shelf-Bin.jpg",
+            "manufacturer-part-number": "WPW10321304",
+            "partselect-number": "PS11752778",
+            "brand": "Whirlpool",
+            "appliance-types": ["refrigerator"],
+            "compatible-with-these-brands": ["Whirlpool", "Kenmore", "Maytag", "KitchenAid"],
+            "compatible-with-these-models": ["WRS325FDAM04"],
+            "fixes_these_symptoms": ["door won't open or close", "ice maker won't dispense ice", "leaking"],
+            "installation-instructions-video": "https://www.youtube.com/watch?v=zSCNN6KpDE8",
+            "price": 36.18,
+            "in_stock": true,
+            "reviews": {
+                    "average-rating": 4.8,
+                    "total-reviews": 307
+            },
+            "link": "https://www.partselect.com/PS11752778-Whirlpool-WPW10321304-Refrigerator-Door-Shelf-Bin.htm"
+        }
+    },
+    {
+        "id": 3,
+        "vector": "This refrigerator ice maker fill cup dispenses the water into the ice cube mold during the fill cycle. Fixes ice maker not making ice, leaking, ice maker dispenses too much ice, and ice maker won't dispense ice. Manufactured by Whirlpool for Kenmore, Whirlpool, Amana, KitchenAid refrigerators.",
+        "payload": {
+            "type": "part",
+            "name": "Water Fill Cup and Bearing WP628356",
+            "description": "This refrigerator ice maker fill cup dispenses the water into the ice cube mold during the fill cycle. Replacing the water fill cup is a possible solution if you notice that the ice maker is leaking, or not making/dispensing ice. If you notice the fill cup has been damaged or cracked; replace the part straight away. This water fill cup is a genuine OEM part and will fit most refrigerators, but check the list of compatible brands to make sure yours is included before purchasing.",
+            "image": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/11743318-1-M-Whirlpool-WP628356-Water-Fill-Cup-and-Bearing.jpg",
+            "manufacturer-part-number": "WP628356",
+            "partselect-number": "PS11743318",
+            "brand": "Whirlpool",
+            "appliance-types": ["refrigerator"],
+            "compatible-with-these-brands": ["Kenmore", "Whirlpool", "Amana", "KitchenAid"],
+            "compatible-with-these-models": ["10653352300"],
+            "fixes_these_symptoms": ["Ice maker not making ice", "Leaking", "Ice maker dispenses too much ice", "Ice maker won't dispense ice"],
+            "installation-instructions-video": "https://www.youtube.com/watch?v=Ia0v-HApuA0",
+            "price": 40.29,
+            "in_stock": true,
+            "reviews": {
+                    "average-rating": 4.5,
+                    "total-reviews": 10
+            },
+            "link": "https://www.partselect.com/PS11743318-Whirlpool-WP628356-Water-Fill-Cup-and-Bearing.htm"
+        }
+    }
+]

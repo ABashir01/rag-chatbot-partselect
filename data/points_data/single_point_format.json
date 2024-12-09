@@ -1,0 +1,25 @@
+{
+    "id": 0,
+    "vector": "",
+    "payload": {
+        "type": "part",
+        "name": "",
+        "description": "",
+        "image": "",
+        "manufacturer-part-number": "",
+        "partselect-number": "",
+        "brand": "",
+        "appliance-types": [""],
+        "compatible-with-these-brands": [""],
+        "compatible-with-these-models": [""],
+        "fixes_these_symptoms": ["", "", "", ""],
+        "installation-instructions-video": "",
+        "price": 5,
+        "in_stock": true,
+        "reviews": {
+                "average-rating": 5,
+                "total-reviews": 5
+        },
+        "link": ""
+    }
+}
