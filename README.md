@@ -14,6 +14,7 @@ The motivation for this was creating a smart shopping assistant that utilized a 
 
 ### Executing program
 
+* To start up the qdrant server locally, follow the instructions at [https://qdrant.tech/documentation/quickstart/](https://qdrant.tech/documentation/quickstart/)
 * To run the backend, navigate to the backend directory, then run "python3 server.py" assuming you've installed the necessary dependencies (probably via pip)
 * To run the frontend, navigate to the frontend directory, then run "npm run dev" if using npm after installing the necessary dependencies (probably via npm or yarn)
 * The database_population.py file can also just be run like a normal python file (using 'python3 server.py')
