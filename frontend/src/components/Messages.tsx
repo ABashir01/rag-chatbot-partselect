@@ -8,6 +8,8 @@ interface Message {
     fromClient: boolean;
     text: string;
     partList: Part[] | null;
+    urlList?: string[] | null;
+    titleList?: string[] | null;
   }
 
   interface Part {
@@ -26,9 +28,10 @@ interface Message {
 interface MessagesProps {
     messageList: Message[];
     loading: boolean;
+    questionType: string;
   }
 
-const Messages: React.FC<MessagesProps> = ({ messageList, loading }) => {
+const Messages: React.FC<MessagesProps> = ({ messageList, loading, questionType }) => {
     return (
         <Box style={{ height: '85%', width: '100%', overflowY: 'auto', padding: '10px', border: '1px solid #d3d3d3' }}>
         {messageList.map((message, index) => (
@@ -60,8 +63,37 @@ const Messages: React.FC<MessagesProps> = ({ messageList, loading }) => {
                         ),
                         img: () => null
                     }}
+
                 >
+
                     {message.text}
+
+
+                </Markdown>
+            </Text>
+            <Text size="md">
+                <Markdown
+                    components={{
+                        a: ({ href, children }) => (
+                            <Anchor
+                                href={href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: '#FFFFFF', fontWeight: 700, textDecoration: 'underline' }}
+                            >
+                                {children}
+                            </Anchor>
+                        ),
+                        img: () => null
+                    }}
+
+                >
+
+                    {questionType == "sitemap" && !message.fromClient ? message.urlList?.map((url, index) => (
+                        "- [" + message.titleList![index] + "](" + url + ")"
+                    )).join("\n") : null}
+
+
                 </Markdown>
             </Text>
             </Box>
@@ -88,7 +120,7 @@ const Messages: React.FC<MessagesProps> = ({ messageList, loading }) => {
             }}>
                 <Group justify='space-between'>
                     <Text>
-                        Searching for parts...
+                        {questionType == "parts" ? "Searching for parts..." : "Thinking..."}
                     </Text>
                     <Loader color='#FFFFFF'/>
                 </Group>

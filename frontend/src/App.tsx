@@ -35,6 +35,8 @@ interface Message {
   fromClient: boolean,
   text: string,
   partList: Part[] | null,
+  urlList?: string[] | null,
+  titleList?: string[] | null,
 }
 
 
@@ -43,10 +45,13 @@ function App() {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const [messageList, setMessageList] = useState<Message[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
+  const [questionType, setQuestionType] = useState<string>('sitemap');
   
 
   const handleSubmit = async () => {
-    if (!queryValue.trim()) return; 
+    if (!queryValue.trim()) return;
+    
+    if (loading) return;
 
     console.log('Query submitted:', queryValue);
 
@@ -61,31 +66,46 @@ function App() {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:5000/chat', {
-        query: queryValue,
-      });
+
+      let response = null;
+
+      if (questionType === 'sitemap') {
+        response = await axios.post('http://localhost:5000/sitemap_chat', {
+          query: queryValue,
+        });
+      }
+      else if (questionType === 'parts') {
+        response = await axios.post('http://localhost:5000/chat', {
+          query: queryValue,
+        });
+      }
 
       setLoading(false);
 
-      console.log('Response:', response.data);
-
-      let newPartsList: Part[] = [];
-      if (response.data.parts_list) {
-        console.log('Parts List:', response.data.parts_list);
-        newPartsList = response.data.parts_list.map((part: any) => ({
-          name: part.name,
-          link: part.link,
-          partSelectNumber: part['partselect-number'],
-          manufacturerNumber: part['manufacturer-part-number'],
-          description: part.description,
-          price: part.price,
-          rating: part.reviews['average-rating'],
-          reviewCount: part.reviews['total-reviews'],
-          image: part.image,
-          isInStock: part.in_stock,
-        }));
+      if (!response || !response.data) {
+        console.error('Invalid response:', response);
+        return
       }
 
+      console.log('Response:', response.data);
+
+    if (questionType == 'parts') {
+        let newPartsList: Part[] = [];
+        if (response.data.parts_list) {
+          console.log('Parts List:', response.data.parts_list);
+          newPartsList = response.data.parts_list.map((part: any) => ({
+            name: part.name,
+            link: part.link,
+            partSelectNumber: part['partselect-number'],
+            manufacturerNumber: part['manufacturer-part-number'],
+            description: part.description,
+            price: part.price,
+            rating: part.reviews['average-rating'],
+            reviewCount: part.reviews['total-reviews'],
+            image: part.image,
+            isInStock: part.in_stock,
+          }));
+      }
 
       const botMessage: Message = {
         fromClient: false,
@@ -94,6 +114,19 @@ function App() {
       };
 
       setMessageList((prev) => [...prev, botMessage]);
+    }
+
+    else if (questionType == 'sitemap') {
+      const botMessage: Message = {
+        fromClient: false,
+        text: response.data.response,
+        partList: null,
+        urlList: response.data.url_list,
+        titleList: response.data.title_list,
+      };
+      setMessageList((prev) => [...prev, botMessage]);
+    }
+      
     } catch (error) {
       console.error('Error fetching response:', error);
       setLoading(false);
@@ -136,7 +169,7 @@ function App() {
           <Box style={{height: '10%', width: '100%', backgroundColor: '#337778', zIndex: 5, display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
             <Text style={{color: 'white', fontWeight: 700, fontSize: rem(20), padding: rem(10)}}>PartSelect AI</Text>
           </Box>
-          <Messages messageList={messageList} loading={loading}/>
+          <Messages messageList={messageList} loading={loading} questionType={questionType}/>
         </Stack>
         <Box style={{height: '10%', width: '100%'}}>
           <TextInput 
